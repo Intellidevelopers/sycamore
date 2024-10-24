@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, ActivityIndicator, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 
 const Splash = () => {
   const navigation = useNavigation();
@@ -20,6 +21,7 @@ const Splash = () => {
       <Image source={require('../../assets/logo.png')} style={styles.logo}/>
       {/* Add an activity indicator below the text */}
       <ActivityIndicator size="large" color="#fff" style={styles.loader} />
+      <StatusBar style='auto'/>
     </View>
   );
 };
@@ -29,7 +31,7 @@ export default Splash;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'purple',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
